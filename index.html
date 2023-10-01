@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+</head>
+<!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+<body>
+    <h1 class="heading"> TIC TAC TOE </h1>
+
+<div class="board"> 
+    <p id="output"></p>
+   
+    <div class="row" >
+        <input class="first" id="frfc" onClick="displayDate1() ;  displayDate();">
+        <input class="first" id="frsc" onClick="displayDate2() ;  displayDate();">
+        <input class="first" id="frtc" onClick="displayDate3();    displayDate();">
+    </div>
+    <div class="row1">
+        <input class="second" id="srfc" onClick="displayDate4(); displayDate();">
+        <input class="second" id="srsc" onClick="displayDate5(); displayDate();">
+        <input class="second" id="srtc" onClick="displayDate6(); displayDate();">
+    </div>
+    <div class="row2">
+        <input class="third" id="trfc" onClick="displayDate7(); displayDate();">
+        <input class="third" id="trsc" onClick="displayDate8(); displayDate();">
+        <input class="third" id="trtc" onClick="displayDate9() ; displayDate();">
+    </div>
+<div class="bottons">
+    <button class="game" onClick="displayDate13()" type="button">New Game</button>
+    <button class="game" onClick="displayDate12()" type="button">Reset</button>
+    <!-- <button class="game" onclick="playWithAi()" type="button"> Play With AI</button> -->
+
+
+    </div>
+
+   
+</div>
+
+
+
+
+
+ <script>
+       let  sum =1
+    function displayDate1(){
+        if (sum == 1) {
+        document.getElementById("frfc").value = "X";
+        document.getElementById("frfc").disabled = true;
+        sum = 0;
+    }
+    else  {
+        document.getElementById("frfc").value = "O";
+        document.getElementById("frfc").disabled = true;
+        sum= 1;
+    }
+        }
+        function displayDate2(){
+            if (sum == 1) {
+        document.getElementById("frsc").value = "X";
+        document.getElementById("frsc").disabled = true;
+        sum = 0;
+    }
+    else {
+        document.getElementById("frsc").value = "O";
+        document.getElementById("frsc").disabled = true;
+        sum = 1;
+    }
+        }
+        function displayDate3(){
+            if (sum == 1) {
+        document.getElementById("frtc").value = "X";
+        document.getElementById("frtc").disabled = true;
+        sum = 0;
+    }
+    else {
+        document.getElementById("frtc").value = "O";
+        document.getElementById("frtc").disabled = true;
+        sum = 1;
+    }
+        }
+        function displayDate4(){
+            if (sum == 1) {
+        document.getElementById("srfc").value = "X";
+        document.getElementById("srfc").disabled = true;
+        sum = 0;
+    }
+    else {
+        document.getElementById("srfc").value = "O";
+        document.getElementById("srfc").disabled = true;
+        sum = 1;
+    }
+        }
+        function displayDate5(){
+            if (sum == 1) {
+        document.getElementById("srsc").value = "X";
+        document.getElementById("srsc").disabled = true;
+        sum = 0;
+    }
+    else {
+        document.getElementById("srsc").value = "O";
+        document.getElementById("srsc").disabled = true;
+        sum = 1;
+    }
+        }
+        function displayDate6(){
+            if (sum == 1) {
+        document.getElementById("srtc").value = "X";
+        document.getElementById("srtc").disabled = true;
+        sum = 0;
+    }
+    else {
+        document.getElementById("srtc").value = "O";
+        document.getElementById("srtc").disabled = true;
+        sum = 1;
+    }
+        }
+        function displayDate7(){
+            if (sum == 1) {
+        document.getElementById("trfc").value = "X";
+        document.getElementById("trfc").disabled = true;
+        sum = 0;
+    }
+    else {
+        document.getElementById("trfc").value = "O";
+        document.getElementById("trfc").disabled = true;
+        sum = 1;
+    }
+        }
+        function displayDate8(){
+            if (sum == 1) {
+        document.getElementById("trsc").value = "X";
+        document.getElementById("trsc").disabled = true;
+        sum = 0;
+    }
+    else {
+        document.getElementById("trsc").value = "O";
+        document.getElementById("trsc").disabled = true;
+        sum = 1;
+    }
+        }
+        function displayDate9(){
+            if (sum == 1) {
+        document.getElementById("trtc").value = "X";
+        document.getElementById("trtc").disabled = true;
+        sum = 0;
+    }
+    else {
+        document.getElementById("trtc").value = "O";
+        document.getElementById("trtc").disabled = true;
+        sum = 1;
+    }
+
+        }
+
+
+
+
+        function displayDate12(){
+
+            location.reload();
+            value1= value2= value3= value4=  value5= value5= value6= value7= value8= value9="";
+        }
+        function displayDate13(){
+            
+            location.reload();
+            value1= value2= value3= value4=  value5= value5= value6= value7= value8= value9="";
+            let X = prompt("enter first player Name")
+            let O = prompt("enter second player name")
+        }
+        function displayDate(){
+
+        
+    
+     let value1=document.getElementById("frfc").value
+     let value2=document.getElementById("frsc").value
+     let value3=document.getElementById("frtc").value
+     let value4= document.getElementById("srfc").value
+     let value5=document.getElementById("srsc").value
+     let value6=document.getElementById("srtc").value
+     let value7=document.getElementById("trfc").value
+     let value8=document.getElementById("trsc").value
+     let value9=document.getElementById("trtc").value
+
+
+     let element1= document.getElementById("frfc")
+     let element2= document.getElementById("frsc")
+     let element3= document.getElementById("frtc")
+     let element4= document.getElementById("srfc")
+     let element5=document.getElementById("srsc")
+     let element6= document.getElementById("srtc")
+     let element7= document.getElementById("trfc")
+     let element8= document.getElementById("trsc")
+     let element9= document.getElementById("trtc")
+
+
+     if((value1==="X" || value1==="X")&&(value2==="X" ||value2==="X")&&(value3==="X"|| value3==="X")){
+
+
+
+        element4.disabled=true;
+        element5.disabled= true;
+        element6.disabled=true;
+        element7.disabled=true;
+        element8.disabled=true;
+        element9.disabled=true;
+
+        document.getElementById("output").innerHTML="PLAYER X WIN"
+
+     }
+     else if((value4==="X" || value4==="X")&&(value5==="X" ||value5==="X")&&(value6==="X" || value6==="X")){
+
+
+
+        element1.disabled=true;
+        element2.disabled= true;
+        element3.disabled=true;
+        element7.disabled=true;
+        element8.disabled=true;
+        element9.disabled=true;
+        document.getElementById("output").innerHTML="PLAYER X WIN"
+     }
+     else if((value7==="X" || value7==="X") && (value8==="X" ||value8==="X")&&(value9==="X"|| value9==="X")){
+        element1.disabled=true;
+        element2.disabled= true;
+        element3.disabled=true;
+        element4.disabled=true;
+        element5.disabled=true;
+        element6.disabled=true;
+        document.getElementById("output").innerHTML="PLAYER X WIN"
+     }
+     else if((value7==="X" || value7==="X")&&(value8==="X" ||value8==="X")&&(value9==="X"|| value9==="X")){
+        element1.disabled=true;
+        element2.disabled= true;
+        element3.disabled=true;
+        element4.disabled=true;
+        element5.disabled=true;
+        element6.disabled=true;
+        document.getElementById("output").innerHTML="PLAYER X WIN"
+     }
+     else if((value1==="X" || value1==="X")&&(value4==="X" ||value4==="X")&&(value7==="X"|| value7==="X")){
+
+
+        element3.disabled=true;
+        element2.disabled= true;
+        element5.disabled=true;
+        element6.disabled=true;
+        element8.disabled=true;
+        element9.disabled=true;
+        document.getElementById("output").innerHTML="PLAYER X WIN"
+
+     }
+     else if((value2==="X" || value2==="X")&&(value5==="X" ||value5==="X")&&(value8==="X"|| value8==="X")){
+
+
+        element3.disabled=true;
+        element1.disabled= true;
+        element4.disabled=true;
+        element6.disabled=true;
+        element7.disabled=true;
+        element9.disabled=true;
+        document.getElementById("output").innerHTML="PLAYER X WIN"
+
+     }
+     else if((value3==="X" || value3==="X")&&(value6==="X" ||value6==="X")&&(value9==="X"|| value9==="X")){
+
+
+        element1.disabled=true;
+        element2.disabled= true;
+        element4.disabled=true;
+        element5.disabled=true;
+        element7.disabled=true;
+        element8.disabled=true;
+        document.getElementById("output").innerHTML="PLAYER X WIN"
+
+     }
+     else if((value1==="X" || value1==="X")&&(value5==="X" ||value5==="X")&&(value9==="X"|| value9==="X")){
+        element2.disabled=true;
+
+
+        element3.disabled= true;
+        element4.disabled=true;
+        element5.disabled=true;
+        element7.disabled=true;
+        element8.disabled=true;
+        document.getElementById("output").innerHTML="PLAYER X WIN"
+
+     }
+     else if((value3==="X" || value3==="X")&&(value5==="X" ||value5==="X")&&(value9==="X"|| value9==="X")){
+        element2.disabled=true;
+        element1.disabled= true;
+        element4.disabled=true;
+        element6.disabled=true;
+        element7.disabled=true;
+        element8.disabled=true;
+        document.getElementById("output").innerHTML="PLAYER X WIN"
+
+     }
+     else if((value1==="X" || value1==="X")&&(value5==="5" ||value6==="5")&&(value9==="9"|| value9==="9")){
+        element2.disabled=true;
+        element3.disabled= true;
+        element4.disabled=true;
+        element5.disabled=true;
+        element7.disabled=true;
+        element8.disabled=true;
+        document.getElementById("output").innerHTML="PLAYER X WIN"
+
+
+     }else if((value1==="O" || value1==="O")&&(value2==="O" ||value2==="O")&&(value3==="O"|| value3==="O")){
+        element4.disabled=true;
+        element5.disabled= true;
+        element6.disabled=true;
+        element7.disabled=true;
+        element8.disabled=true;
+        element9.disabled=true;
+        document.getElementById("output").innerHTML="PLAYER X WIN"
+     }
+     else if((value4==="O" || value4==="O")&&(value5==="O" ||value5==="O") && (value6==="O"|| value6==="O")){
+        element1.disabled=true;
+        element2.disabled= true;
+        element3.disabled=true;
+        element7.disabled=true;
+        element8.disabled=true;
+        element9.disabled=true;
+        document.getElementById("output").innerHTML="PLAYER 0 WIN"
+
+     }
+     else if((value7==="O" || value7==="O")&&(value8==="O" ||value8==="O")&&(value9==="O"|| value9==="O")){
+        element1.disabled=true;
+        element2.disabled= true;
+        element3.disabled=true;
+        element4.disabled=true;
+        element5.disabled=true;
+        element6.disabled=true;
+        document.getElementById("output").innerHTML="PLAYER 0 WIN"
+
+
+     }
+     else if((value2==="O" || value2==="O")&&(value5==="O" ||value5==="O")&&(value8==="O"|| value8==="O")){
+        element1.disabled=true;
+        element7.disabled= true;
+        element3.disabled=true;
+        element4.disabled=true;
+        element9.disabled=true;
+        element6.disabled==true;
+        document.getElementById("output").innerHTML="PLAYER 0 WIN"
+
+
+     }
+     else if((value1==="O" || value1==="O")&&(value4==="O" ||value4==="O")&&(value9==="O"|| value9==="O")){
+        element8.disabled=true;
+        element2.disabled= true;
+        element3.disabled=true;
+        element5.disabled=true;
+        element9.disabled=true;
+        element6.disabled=true;
+        document.getElementById("output").innerHTML="PLAYER 0 WIN"
+
+
+     }
+     else if((value3==="O" || value3==="O")&&(value5==="O" ||value5==="O")&&(value7==="O"|| value7==="O")){
+        element1.disabled=true;
+        element2.disabled= true;
+        element4.disabled=true;
+        element5.disabled=true;
+        element7.disabled=true;
+        element8.disabled==true;
+        document.getElementById("output").innerHTML="PLAYER 0 WIN"
+
+
+     }
+     else if((value1==="X" || value1==="O")&& (value2==="X" || value2==="O") &&(value3==="X"|| value3==="O")&&( value4==="X" || value4==="O")&&(value5==="X" ||value5==="O")&&(value6==="X"||value6==="O")&&(value7==="X"||value7==="O")&&(value8==="X"||value8==="O")&&(value9==="X"||value9==="O")){
+        document.getElementById("output").innerHTML="Match Tie"
+     }
+     else{
+if(sum===1){
+    document.getElementById("output").innerHTML="Player x Turn"
+
+}
+
+else{
+     document.getElementById("output").innerHTML="Player 0 Turn"
+}
+
+
+
+     }
+    }
+
+//     function playWithAi(){
+//       let  sum =1
+//     function displayDate1(){
+        
+//         document.getElementById("frfc").value = "X";
+//         document.getElementById("frfc").disabled = true;
+
+
+//         document.getElementById("frsc").value="0"
+//         document.getElementById("frsc").disabled = true;
+
+    
+//     }
+
+//         }
+//         function displayDate2(){
+//             if (sum == 1) {
+//         document.getElementById("frsc").value = "X";
+//         document.getElementById("frsc").disabled = true;
+//         sum = 0;
+//     }
+//     else {
+//         document.getElementById("frsc").value = "O";
+//         document.getElementById("frsc").disabled = true;
+//         sum = 1;
+//     }
+//         }
+//         function displayDate3(){
+//             if (sum == 1) {
+//         document.getElementById("frtc").value = "X";
+//         document.getElementById("frtc").disabled = true;
+//         sum = 0;
+//     }
+//     else {
+//         document.getElementById("frtc").value = "O";
+//         document.getElementById("frtc").disabled = true;
+//         sum = 1;
+//     }
+//         }
+//         function displayDate4(){
+//             if (sum == 1) {
+//         document.getElementById("srfc").value = "X";
+//         document.getElementById("srfc").disabled = true;
+//         sum = 0;
+//     }
+//     else {
+//         document.getElementById("srfc").value = "O";
+//         document.getElementById("srfc").disabled = true;
+//         sum = 1;
+//     }
+//         }
+//         function displayDate5(){
+//             if (sum == 1) {
+//         document.getElementById("srsc").value = "X";
+//         document.getElementById("srsc").disabled = true;
+//         sum = 0;
+//     }
+//     else {
+//         document.getElementById("srsc").value = "O";
+//         document.getElementById("srsc").disabled = true;
+//         sum = 1;
+//     }
+//         }
+//         function displayDate6(){
+//             if (sum == 1) {
+//         document.getElementById("srtc").value = "X";
+//         document.getElementById("srtc").disabled = true;
+//         sum = 0;
+//     }
+//     else {
+//         document.getElementById("srtc").value = "O";
+//         document.getElementById("srtc").disabled = true;
+//         sum = 1;
+//     }
+//         }
+//         function displayDate7(){
+//             if (sum == 1) {
+//         document.getElementById("trfc").value = "X";
+//         document.getElementById("trfc").disabled = true;
+//         sum = 0;
+//     }
+//     else {
+//         document.getElementById("trfc").value = "O";
+//         document.getElementById("trfc").disabled = true;
+//         sum = 1;
+//     }
+//         }
+//         function displayDate8(){
+//             if (sum == 1) {
+//         document.getElementById("trsc").value = "X";
+//         document.getElementById("trsc").disabled = true;
+//         sum = 0;
+//     }
+//     else {
+//         document.getElementById("trsc").value = "O";
+//         document.getElementById("trsc").disabled = true;
+//         sum = 1;
+//     }
+//         }
+//         function displayDate9(){
+//             if (sum == 1) {
+//         document.getElementById("trtc").value = "X";
+//         document.getElementById("trtc").disabled = true;
+//         sum = 0;
+//     }
+//     else {
+//         document.getElementById("trtc").value = "O";
+//         document.getElementById("trtc").disabled = true;
+//         sum = 1;
+//     }
+
+//         }
+
+
+
+
+//         function displayDate12(){
+//             location.reload();
+//             value1= value2= value3= value4=  value5= value5= value6= value7= value8= value9="";
+//         }
+//         function displayDate(){
+
+        
+    
+//      let value1=document.getElementById("frfc").value
+//      let value2=document.getElementById("frsc").value
+//      let value3=document.getElementById("frtc").value
+//      let value4= document.getElementById("srfc").value
+//      let value5=document.getElementById("srsc").value
+//      let value6=document.getElementById("srtc").value
+//      let value7=document.getElementById("trfc").value
+//      let value8=document.getElementById("trsc").value
+//      let value9=document.getElementById("trtc").value
+
+
+//      let element1= document.getElementById("frfc")
+//      let element2= document.getElementById("frsc")
+//      let element3= document.getElementById("frtc")
+//      let element4= document.getElementById("srfc")
+//      let element5=document.getElementById("srsc")
+//      let element6= document.getElementById("srtc")
+//      let element7= document.getElementById("trfc")
+//      let element8= document.getElementById("trsc")
+//      let element9= document.getElementById("trtc")
+
+
+//      if((value1==="X" || value1==="X")&&(value2==="X" ||value2==="X")&&(value3==="X"|| value3==="X")){
+
+
+
+//         element4.disabled=true;
+//         element5.disabled= true;
+//         element6.disabled=true;
+//         element7.disabled=true;
+//         element8.disabled=true;
+//         element9.disabled=true;
+
+//         document.getElementById("output").innerHTML="PLAYER X WIN"
+
+//      }
+//      else if((value4==="X" || value4==="X")&&(value5==="X" ||value5==="X")&&(value6==="X" || value6==="X")){
+
+
+
+//         element1.disabled=true;
+//         element2.disabled= true;
+//         element3.disabled=true;
+//         element7.disabled=true;
+//         element8.disabled=true;
+//         element9.disabled=true;
+//         document.getElementById("output").innerHTML="PLAYER X WIN"
+//      }
+//      else if((value7==="X" || value7==="X") && (value8==="X" ||value8==="X")&&(value9==="X"|| value9==="X")){
+//         element1.disabled=true;
+//         element2.disabled= true;
+//         element3.disabled=true;
+//         element4.disabled=true;
+//         element5.disabled=true;
+//         element6.disabled=true;
+//         document.getElementById("output").innerHTML="PLAYER X WIN"
+//      }
+//      else if((value7==="X" || value7==="X")&&(value8==="X" ||value8==="X")&&(value9==="X"|| value9==="X")){
+//         element1.disabled=true;
+//         element2.disabled= true;
+//         element3.disabled=true;
+//         element4.disabled=true;
+//         element5.disabled=true;
+//         element6.disabled=true;
+//         document.getElementById("output").innerHTML="PLAYER X WIN"
+//      }
+//      else if((value1==="X" || value1==="X")&&(value4==="X" ||value4==="X")&&(value7==="X"|| value7==="X")){
+
+
+//         element3.disabled=true;
+//         element2.disabled= true;
+//         element5.disabled=true;
+//         element6.disabled=true;
+//         element8.disabled=true;
+//         element9.disabled=true;
+//         document.getElementById("output").innerHTML="PLAYER X WIN"
+
+//      }
+//      else if((value2==="X" || value2==="X")&&(value5==="X" ||value5==="X")&&(value8==="X"|| value8==="X")){
+
+
+//         element3.disabled=true;
+//         element1.disabled= true;
+//         element4.disabled=true;
+//         element6.disabled=true;
+//         element7.disabled=true;
+//         element9.disabled=true;
+//         document.getElementById("output").innerHTML="PLAYER X WIN"
+
+//      }
+//      else if((value3==="X" || value3==="X")&&(value6==="X" ||value6==="X")&&(value9==="X"|| value9==="X")){
+
+
+//         element1.disabled=true;
+//         element2.disabled= true;
+//         element4.disabled=true;
+//         element5.disabled=true;
+//         element7.disabled=true;
+//         element8.disabled=true;
+//         document.getElementById("output").innerHTML="PLAYER X WIN"
+
+//      }
+//      else if((value1==="X" || value1==="X")&&(value5==="X" ||value5==="X")&&(value9==="X"|| value9==="X")){
+//         element2.disabled=true;
+
+
+//         element3.disabled= true;
+// //     element4.disabled=true;
+//         element5.disabled=true;
+//         element7.disabled=true;
+//         element8.disabled=true;
+//         document.getElementById("output").innerHTML="PLAYER X WIN"
+
+//      }
+//      else if((value3==="X" || value3==="X")&&(value5==="X" ||value5==="X")&&(value9==="X"|| value9==="X")){
+//         element2.disabled=true;
+//         element1.disabled= true;
+//         element4.disabled=true;
+//         element6.disabled=true;
+//         element7.disabled=true;
+//         element8.disabled=true;
+//         document.getElementById("output").innerHTML="PLAYER X WIN"
+
+//      }
+//      else if((value1==="X" || value1==="X")&&(value5==="5" ||value6==="5")&&(value9==="9"|| value9==="9")){
+//         element2.disabled=true;
+//         element3.disabled= true;
+//         element4.disabled=true;
+//         element5.disabled=true;
+//         element7.disabled=true;
+//         element8.disabled=true;
+//         document.getElementById("output").innerHTML="PLAYER X WIN"
+
+
+//      }else if((value1==="O" || value1==="O")&&(value2==="O" ||value2==="O")&&(value3==="O"|| value3==="O")){
+//         element4.disabled=true;
+//         element5.disabled= true;
+//         element6.disabled=true;
+//         element7.disabled=true;
+//         element8.disabled=true;
+//         element9.disabled=true;
+//         document.getElementById("output").innerHTML="PLAYER X WIN"
+//      }
+//      else if((value4==="O" || value4==="O")&&(value5==="O" ||value5==="O") && (value6==="O"|| value6==="O")){
+//         element1.disabled=true;
+//         element2.disabled= true;
+//         element3.disabled=true;
+//         element7.disabled=true;
+//         element8.disabled=true;
+//         element9.disabled=true;
+//         document.getElementById("output").innerHTML="PLAYER 0 WIN"
+
+//      }
+//      else if((value7==="O" || value7==="O")&&(value8==="O" ||value8==="O")&&(value9==="O"|| value9==="O")){
+//         element1.disabled=true;
+//         element2.disabled= true;
+//         element3.disabled=true;
+//         element4.disabled=true;
+//         element5.disabled=true;
+//         element6.disabled=true;
+//         document.getElementById("output").innerHTML="PLAYER 0 WIN"
+
+
+//      }
+//      else if((value2==="O" || value2==="O")&&(value5==="O" ||value5==="O")&&(value8==="O"|| value8==="O")){
+//         element1.disabled=true;
+//         element7.disabled= true;
+//         element3.disabled=true;
+//         element4.disabled=true;
+//         element9.disabled=true;
+//         element6.disabled==true;
+//         document.getElementById("output").innerHTML="PLAYER 0 WIN"
+
+
+//      }
+//      else if((value1==="O" || value1==="O")&&(value4==="O" ||value4==="O")&&(value9==="O"|| value9==="O")){
+//         element8.disabled=true;
+//         element2.disabled= true;
+//         element3.disabled=true;
+//         element5.disabled=true;
+//         element9.disabled=true;
+//         element6.disabled=true;
+//         document.getElementById("output").innerHTML="PLAYER 0 WIN"
+
+
+//      }
+//      else if((value3==="O" || value3==="O")&&(value5==="O" ||value5==="O")&&(value7==="O"|| value7==="O")){
+//         element1.disabled=true;
+//         element2.disabled= true;
+//         element4.disabled=true;
+//         element5.disabled=true;
+//         element7.disabled=true;
+//         element8.disabled==true;
+//         document.getElementById("output").innerHTML="PLAYER 0 WIN"
+
+
+//      }
+//      else if((value1==="X" || value1==="O")&& (value2==="X" || value2==="O") &&(value3==="X"|| value3==="O")&&( value4==="X" || value4==="O")&&(value5==="X" ||value5==="O")&&(value6==="X"||value6==="O")&&(value7==="X"||value7==="O")&&(value8==="X"||value8==="O")&&(value9==="X"||value9==="O")){
+//         document.getElementById("output").innerHTML="Match Tie"
+//      }
+//      else{
+// if(sum===1){
+//     document.getElementById("output").innerHTML="Player x Turn"
+
+// }
+
+// else{
+//      document.getElementById("output").innerHTML="Player 0 Turn"
+// }
+
+
+        
+
+        
+//     }
+// }
+    
+//     }
+        
+
+    
+  
+    
+
+
+
+
+
+
+</script> 
+</body>
+</html>
